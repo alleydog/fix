@@ -1,6 +1,9 @@
 Установка недостающих пакетов
 sudo apt install kbd dirmngr mc links curl cmus mlocate mtr-tiny mpv
 
+Ошибка при обновлении Deepin v20 (1002)
+echo "deb https://uos-packages.deepin.com/printer eagle non-free" | sudo tee /etc/apt/sources.list.d/printer.list
+
 Решение проблем индикатором раскладки
 pkill dde-dock
 

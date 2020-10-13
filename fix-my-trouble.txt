@@ -1,7 +1,7 @@
 Ошибка при обновлении Deepin v20 (1002)
 echo "deb https://uos-packages.deepin.com/printer eagle non-free" | sudo tee /etc/apt/sources.list.d/printer.list
 
-Установка недостающих пакетов Deepin 15.11
+Установка недостающих пакетов
 sudo apt install mc lynx htop curl cmus mlocate mtr-tiny mpv (kbd dirmngr только для Deepin 15.11)
 
 Решение проблем индикатором раскладки Deepin 15.11

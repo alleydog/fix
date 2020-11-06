@@ -1,11 +1,10 @@
-# fix-my-trouble
-# Ошибка при обновлении Deepin v20 (1002)
+# Deepin v20 (1002)
 echo "deb https://uos-packages.deepin.com/printer eagle non-free" | sudo tee /etc/apt/sources.list.d/printer.list
 
-# Установка недостающих пакетов Deepin 15.11
+# Deepin 15.11
 sudo apt install kbd mc links htop curl cmus mpv
 
-# Решение проблем индикатором раскладки Deepin 15.11
+# Решение проблем c доком Deepin 15.11
 pkill dde-dock
 
 # Сервис

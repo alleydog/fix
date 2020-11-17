@@ -1,10 +1,7 @@
-# Deepin v20 (1002)
-echo "deb https://uos-packages.deepin.com/printer eagle non-free" | sudo tee /etc/apt/sources.list.d/printer.list
-
 # Deepin 15.11
-sudo apt install kbd mc links htop curl cmus mpv
+sudo apt install kbd
 
-# dde-dock Deepin 15.11
+# dde-dock Deepin 15.11 [Ctrl+Alt+Insert]
 pkill dde-dock
 
 # fix-my-trouble.service

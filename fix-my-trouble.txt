@@ -1,9 +1,3 @@
-# Deepin 15.11
-sudo apt install kbd
-
-# dde-dock Deepin 15.11 [Ctrl+Alt+Insert]
-pkill dde-dock
-
 # fix-my-trouble.service
 sudo nano /etc/systemd/system/fix-my-trouble.service
 
@@ -28,7 +22,7 @@ sudo setkeycodes 3a 42
 sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
 
 # chmod
-sudo chmod u+x /etc/systemd/system/fix-my-trouble.sh
+sudo chmod +x /etc/systemd/system/fix-my-trouble.sh
 sudo chmod 644 /etc/systemd/system/fix-my-trouble.service
 
 # systemctl

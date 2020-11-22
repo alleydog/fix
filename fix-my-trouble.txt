@@ -28,6 +28,3 @@ sudo chmod 644 /etc/systemd/system/fix-my-trouble.service
 # systemctl
 sudo systemctl daemon-reload
 sudo systemctl enable /etc/systemd/system/fix-my-trouble.service
-
-# nmcli
-nmcli c import type openvpn file ~/.protonvpn/jp-free-01.protonvpn.com.udp.ovpn

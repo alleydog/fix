@@ -1,5 +1,5 @@
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install firefox-locale-ru transmission-qt mc lynx cmus mpv
+pkcon refresh && pkcon update
+pkcon install firefox-locale-ru transmission-qt mc lynx cmus mpv
 
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list

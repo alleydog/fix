@@ -1,12 +1,10 @@
-pkcom install firefox-locale-ru transmission-qt curl mc links cmus mpv
+pkcom install firefox-locale-ru transmission-qt curl mc links cmus mpv python3-distutils
 
-sudo apt install python3-distutils
+echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/yandex-disk.list > /dev/null && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add - && sudo apt-get update && sudo apt-get install -y yandex-disk
 
 wget -q -O - https://repo.protonvpn.com/debian/public_key.asc | sudo apt-key add -
 sudo add-apt-repository 'deb https://repo.protonvpn.com/debian unstable main'
 sudo apt-get update && sudo apt-get install protonvpn
-
-echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/yandex-disk.list > /dev/null && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add - && sudo apt-get update && sudo apt-get install -y yandex-disk
 
 sudo apt install apt-transport-https curl gnupg
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -

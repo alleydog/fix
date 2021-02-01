@@ -1,4 +1,4 @@
-pkcom install firefox-locale-ru transmission-qt curl mc lynx|links cmus mpv
+pkcom install firefox-locale-ru transmission-qt curl mc links cmus mpv
 
 wget -q -O - https://repo.protonvpn.com/debian/public_key.asc | sudo apt-key add -
 sudo add-apt-repository 'deb https://repo.protonvpn.com/debian unstable main'
@@ -17,3 +17,7 @@ sudo apt-get update && sudo apt-get install spotify-client
 
 sudo add-apt-repository ppa:libreoffice/ppa && sudo apt-get update
 sudo apt-get install libreoffice libreoffice-kde libreoffice-pdfimport libreoffice-help-ru libreoffice-l10n-ru myspell-ru hyphen-ru mythes-ru
+
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+sudo apt-get update && sudo apt-get install atom

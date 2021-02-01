@@ -1,5 +1,7 @@
 pkcom install firefox-locale-ru transmission-qt curl mc links cmus mpv
 
+sudo apt install python3-distutils
+
 wget -q -O - https://repo.protonvpn.com/debian/public_key.asc | sudo apt-key add -
 sudo add-apt-repository 'deb https://repo.protonvpn.com/debian unstable main'
 sudo apt-get update && sudo apt-get install protonvpn

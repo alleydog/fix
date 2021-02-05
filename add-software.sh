@@ -26,7 +26,3 @@ wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
 echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
 sudo apt update
 sudo apt install -y dbeaver-ce
-
-pkcon refresh
-pkcon update
-pkcon install yandex-disk brave-browser spotify-client dbeaver-ce

@@ -1,6 +1,6 @@
 pkcon refresh
 pkcon update
-pkcom install firefox-locale-ru transmission-qt curl mc links cmus mpv python3-distutils
+pkcon install firefox-locale-ru transmission-qt curl mc links cmus mpv python3-distutils
 
 sudo add-apt-repository ppa:libreoffice/ppa
 sudo apt update

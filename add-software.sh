@@ -1,5 +1,5 @@
 pkcon refresh && pkcon update
-pkcon install firefox-locale-ru transmission-qt curl mc links cmus mpv htop
+pkcon install firefox-locale-ru transmission-qt curl mc links mpv
 
 sudo add-apt-repository ppa:libreoffice/ppa
 sudo apt update && sudo apt install -y libreoffice libreoffice-kde libreoffice-pdfimport libreoffice-help-ru libreoffice-l10n-ru myspell-ru hyphen-ru mythes-ru

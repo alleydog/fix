@@ -4,7 +4,6 @@ sudo nano /etc/systemd/system/fix-my-trouble.sh
 # >> fix-my-trouble.sh
 #!/bin/sh -e
 sudo setkeycodes 3a 42
-sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
 
 # fix-my-trouble.service
 sudo nano /etc/systemd/system/fix-my-trouble.service

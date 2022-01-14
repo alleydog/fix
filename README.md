@@ -1,3 +1,3 @@
 # fix
 
-tricks to solve problems
+litle tricks to solve problems

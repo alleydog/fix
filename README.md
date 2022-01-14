@@ -1,1 +1,1 @@
-litle tricks to solve problems
+litle tricks

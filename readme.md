@@ -4,7 +4,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=
 ```
 #
 Concatination audio files:
-###
+#
 Windows bat-file:
 ```
 (for %%i in (*.wav) do @echo file '%%i') > mylist.txt
@@ -17,7 +17,7 @@ Windows Powershell:
 ```
 foreach ($i in Get-ChildItem .\*.wav) {echo "file '$i'" >> mylist.txt}
 ```
-###
+#
 ```
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.wav
 ```

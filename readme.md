@@ -32,3 +32,8 @@ Cut:
 ```
 ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy cut.mp4
 ```
+
+#
+```
+dir | rename-item -NewName {$_.name -replace ". "," "}
+```

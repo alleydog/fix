@@ -35,10 +35,12 @@ Cut:
 ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy cut.mp4
 ```
 #
+Mass rename:
 ```
 dir | rename-item -NewName {$_.name -replace ". "," "}
 ```
 #
+Download from youtube
 ```
 youtube-dl -F https://youtu.be/kJnr3V6TANw
 ```

@@ -1,11 +1,5 @@
 # fix & hint & triks
 
-YouTube RSS
-###
-```
-https://www.youtube.com/feeds/videos.xml?channel_id=
-```
-#
 Concatination audio files:
 ###
 Windows bat-file:

@@ -22,5 +22,5 @@ Mass rename:
 dir | rename-item -NewName {$_.name -replace ". "," "}
 
 Download from youtube:
-youtube-dl -F https://youtu.be/Mbog8kQZHT0
-youtube-dl -f 249 https://youtu.be/Mbog8kQZHT0
+youtube-dl -F https://youtu.be/%id%
+youtube-dl -f 249 https://youtu.be/%id%

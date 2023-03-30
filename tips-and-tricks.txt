@@ -1,16 +1,18 @@
-CLI:
-for %i in (*.wav) do @echo file '%i') > mylist.txt
-
-BAT:
-(for %%i in (*.wav) do @echo file '%%i') > mylist.txt
+Concat:
 
 Powershell:
 foreach ($i in Get-ChildItem .\*.wav) {echo "file '$i'" >> mylist.txt}
 
-Concat:
+.bat:
+(for %%i in (*.wav) do @echo file '%%i') > mylist.txt
+
+CLI:
+for %i in (*.wav) do @echo file '%i') > mylist.txt
+
+FFmpeg:
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.wav
 
-Extraction:
+Extract:
 ffmpeg -i video.mp4 -vn -acodec copy audio.m4a
 
 Cut:

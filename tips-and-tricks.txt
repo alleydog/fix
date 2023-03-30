@@ -1,4 +1,4 @@
-Concat:
+concat:
 ------------------------------------------------------------------------------
 powershell:
 foreach ($i in Get-ChildItem .\*.wav) {echo "file '$i'" >> mylist.txt}

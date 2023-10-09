@@ -1,23 +1,17 @@
-------------------------------------------------------------------------------
-
 concat:
-powershell:
+
 foreach ($i in Get-ChildItem .\*.wav) {echo "file '$i'" >> mylist.txt}
-
-==============================================================================
-
-ffmpeg:
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.wav
-
-==============================================================================
-
-extract:
-ffmpeg -i video.mp4 -vn -acodec copy audio.m4a
 
 ==============================================================================
 
 convert:
 ffmpeg -i son_origine.wav -vn -ar 44100 -ac 2 -ab 192 -f mp3 son_final.mp3
+
+==============================================================================
+
+extract:
+ffmpeg -i video.mp4 -vn -acodec copy audio.m4a
 
 ==============================================================================
 
@@ -28,5 +22,3 @@ ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy cut.mp4
 
 mass rename:
 dir | rename-item -NewName {$_.name -replace "search","replace"}
-
-------------------------------------------------------------------------------

@@ -19,6 +19,11 @@ ffmpeg -i video.mp4 -vn -acodec copy audio.m4a
 
 ==============================================================================
 
+convert:
+ffmpeg -i son_origine.wav -vn -ar 44100 -ac 2 -ab 192 -f mp3 son_final.mp3
+
+==============================================================================
+
 cut:
 ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy cut.mp4
 

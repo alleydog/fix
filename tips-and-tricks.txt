@@ -1,11 +1,16 @@
 concat:
-foreach ($i in Get-ChildItem .\*.wav) {echo "file '$i'" >> mylist.txt}
-ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.wav
-
 ==============================================================================
 
+foreach ($i in Get-ChildItem .\*.mp3) {echo "file '$i'" >> mylist.txt}
+
+------------------------------------------------------------------------------
+
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy con.mp3
+
+------------------------------------------------------------------------------
+
 convert:
-ffmpeg -i son_origine.wav -vn -ar 44100 -ac 2 -ab 192 -f mp3 son_final.mp3
+ffmpeg -i con.mp3 -vn -ar 44100 -ac 2 -ab 192 -f mp3 out.mp3
 
 ==============================================================================
 

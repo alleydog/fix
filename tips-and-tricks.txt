@@ -5,7 +5,7 @@ foreach ($i in Get-ChildItem .\*.mp3) {echo "file '$i'" >> mylist.txt}
 
 ------------------------------------------------------------------------------
 
-ffmpeg -f concat -safe 0 -i mylist.txt -c copy con.mp3
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy out.mp3
 
 ------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ ffmpeg -i video.mp4 -vn -acodec copy audio.m4a
 ==============================================================================
 
 cut:
-ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy cut.mp4
+ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy out.mp4
 
 ==============================================================================
 

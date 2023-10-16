@@ -10,17 +10,17 @@ ffmpeg -f concat -safe 0 -i mylist.txt -c copy out.mp3
 ------------------------------------------------------------------------------
 
 convert:
-ffmpeg -i con.mp3 -vn -ar 44100 -ac 2 -ab 192 -f mp3 out.mp3
+ffmpeg -i in.mp3 -vn -ar 44100 -ac 2 -ab 192 -f mp3 out.mp3
 
 ==============================================================================
 
 extract:
-ffmpeg -i video.mp4 -vn -acodec copy audio.m4a
+ffmpeg -i in.mp4 -vn -acodec copy out.m4a
 
 ==============================================================================
 
 cut:
-ffmpeg -i video.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy out.mp4
+ffmpeg -i in.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy out.mp4
 
 ==============================================================================
 

@@ -1,5 +1,5 @@
 #!/bin/sh -e
-sudo touch /etc/systemd/system/fix-my-kbde.sh
+sudo touch /etc/systemd/system/fix-my-kbd.sh
 
 echo "#!/bin/sh -e" > /etc/systemd/system/fix-my-kbd.sh
 echo "sudo setkeycodes 3a 42" >> /etc/systemd/system/fix-my-kbd.sh

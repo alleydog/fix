@@ -1,6 +1,5 @@
 concat:
-foreach ($i in Get-ChildItem .\*.mp3) {echo "file '$i'" >> list.txt}
-ffmpeg -f concat -safe 0 -i list.txt -c copy out.mp3
+foreach ($i in Get-ChildItem .\*.mp3) {echo "file '$i'" >> list.txt} | ffmpeg -f concat -safe 0 -i list.txt -c copy out.mp3
 
 convert:
 ffmpeg -i in.mp3 -vn -ar 44100 -ac 2 -ab 192 -f mp3 out.mp3

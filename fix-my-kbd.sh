@@ -1,4 +1,5 @@
 #!/bin/sh -e
+
 sudo touch /etc/systemd/system/fix-my-kbd.sh
 
 echo "#!/bin/sh -e" > /etc/systemd/system/fix-my-kbd.sh
@@ -9,11 +10,9 @@ sudo touch /etc/systemd/system/fix-my-kbd.service
 echo "[Unit]" > /etc/systemd/system/fix-my-kbd.service
 echo "Description=fix my kbd" >> /etc/systemd/system/fix-my-kbd.service
 echo "After=multi-user.target" >> /etc/systemd/system/fix-my-kbd.service
-
 echo "[Service]" >> /etc/systemd/system/fix-my-kbd.service
 echo "Type=idle" >> /etc/systemd/system/fix-my-kbd.service
 echo "ExecStart=/etc/systemd/system/fix-my-kbd.sh" >> /etc/systemd/system/fix-my-kbd.service
-
 echo "[Install]" >> /etc/systemd/system/fix-my-kbd.service
 echo "WantedBy=multi-user.target" >> /etc/systemd/system/fix-my-kbd.service
 

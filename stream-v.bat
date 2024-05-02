@@ -1,2 +1,0 @@
-@echo off
-@ffmpeg -hide_banner -f dshow -rtbufsize 80M -video_size 640x360 -framerate 30 -vcodec mjpeg -i video="HD Camera" -c:v libx264 -preset veryfast -pix_fmt yuv420p -g 60 -b:v 500k -maxrate 500k -bufsize 500k -f flv "$RTMP_URL/$STREAM_KEY"

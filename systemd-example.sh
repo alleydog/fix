@@ -3,7 +3,7 @@
 sudo touch /etc/systemd/system/example.sh
 
 echo "#!/bin/sh -e" > /etc/systemd/system/example.sh
-echo "example" >> /etc/systemd/system/example.sh
+echo "sudo example" >> /etc/systemd/system/example.sh
 
 sudo touch /etc/systemd/system/example.service
 

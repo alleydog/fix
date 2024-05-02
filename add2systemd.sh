@@ -1,23 +1,18 @@
 #!/bin/sh -e
 
-sudo touch /etc/systemd/system/fix-my-kbd.sh
+sudo touch /etc/systemd/system/example.service
 
-echo "#!/bin/sh -e" > /etc/systemd/system/fix-my-kbd.sh
-echo "sudo setkeycodes 3a 42" >> /etc/systemd/system/fix-my-kbd.sh
+echo "[Unit]" > /etc/systemd/system/example.service
+echo "Description=Example" >> /etc/systemd/system/example.service
+echo "After=multi-user.target" >> /etc/systemd/system/example.service
+echo "[Service]" >> /etc/systemd/system/example.service
+echo "Type=idle" >> /etc/systemd/system/example.service
+echo "ExecStart=/etc/systemd/system/example.sh" >> /etc/systemd/system/example.service
+echo "[Install]" >> /etc/systemd/system/example.service
+echo "WantedBy=multi-user.target" >> /etc/systemd/system/example.service
 
-sudo touch /etc/systemd/system/fix-my-kbd.service
-
-echo "[Unit]" > /etc/systemd/system/fix-my-kbd.service
-echo "Description=fix my kbd" >> /etc/systemd/system/fix-my-kbd.service
-echo "After=multi-user.target" >> /etc/systemd/system/fix-my-kbd.service
-echo "[Service]" >> /etc/systemd/system/fix-my-kbd.service
-echo "Type=idle" >> /etc/systemd/system/fix-my-kbd.service
-echo "ExecStart=/etc/systemd/system/fix-my-kbd.sh" >> /etc/systemd/system/fix-my-kbd.service
-echo "[Install]" >> /etc/systemd/system/fix-my-kbd.service
-echo "WantedBy=multi-user.target" >> /etc/systemd/system/fix-my-kbd.service
-
-sudo chmod +x /etc/systemd/system/fix-my-kbd.sh
-sudo chmod 644 /etc/systemd/system/fix-my-kbd.service
+sudo chmod +x /etc/systemd/system/example.sh
+sudo chmod 644 /etc/systemd/system/example.service
 
 sudo systemctl daemon-reload
-sudo systemctl enable /etc/systemd/system/fix-my-kbd.service
+sudo systemctl enable /etc/systemd/system/example.service

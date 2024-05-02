@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+sudo touch /etc/systemd/system/example.sh
 sudo touch /etc/systemd/system/example.service
 
 echo "[Unit]" > /etc/systemd/system/example.service

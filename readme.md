@@ -1,5 +1,5 @@
 cut:
-```html
+```code
 ffmpeg -i in.mp4 -ss 00:00:01 -t 00:00:22 -vcodec copy -acodec copy out.mp4
 ```
 extract:

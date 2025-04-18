@@ -14,4 +14,4 @@ mass rename:
 dir | rename-item -NewName {$_.name -replace "search","replace"}
 
 stream:
-ffmpeg -hide_banner -i "%SRC%" -c:a aac -b:a 64k -ac 2 -ar 48000 -f flv "%RTMP_URL%%STREAM_KEY%"
+ffmpeg -hide_banner -i "%SRC%" -c:a aac -b:a 32k -ac 2 -ar 48000 -f flv "%RTMP_URL%%STREAM_KEY%"
